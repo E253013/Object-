@@ -1,0 +1,51 @@
+// Superclass Person
+class Person {
+    void displayInfo() {
+        System.out.println("This is a person.");
+    }
+}
+
+// Subclass Doctor extending Person
+class Doctor extends Person {
+    void work() {
+        System.out.println("Doctor treats patients.");
+    }
+}
+
+// Subclass Teacher extending Person
+class Teacher extends Person {
+    void work() {
+        System.out.println("Teacher teaches students.");
+    }
+}
+
+// Subclass Engineer extending Person
+class Engineer extends Person {
+    void work() {
+        System.out.println("Engineer builds systems and structures.");
+    }
+}
+
+// Main class to demonstrate Hierarchical Inheritance
+public class lab6_2 {
+    public static void main(String[] args) {
+        // Creating objects of each subclass
+        Doctor d = new Doctor();
+        Teacher t = new Teacher();
+        Engineer e = new Engineer();
+
+        // Displaying info and work details for Doctor
+        d.displayInfo();
+        d.work();
+        System.out.println();
+
+        // Displaying info and work details for Teacher
+        t.displayInfo();
+        t.work();
+        System.out.println();
+
+        // Displaying info and work details for Engineer
+        e.displayInfo();
+        e.work();
+    }
+}
