@@ -1,0 +1,52 @@
+// Student class demonstrating encapsulation
+class Student {
+    // Private fields
+    private String name;
+    private int id;
+    private double cgpa;
+
+    // Setter methods to assign values
+    void setName(String name) {
+        this.name = name;
+    }
+
+    void setId(int id) {
+        this.id = id;
+    }
+
+    void setCgpa(double cgpa) {
+        this.cgpa = cgpa;
+    }
+
+    // Getter methods to return values
+    String getName() {
+        return name;
+    }
+
+    int getId() {
+        return id;
+    }
+
+    double getCgpa() {
+        return cgpa;
+    }
+}
+
+// Main class
+public class lab9_1 {
+    public static void main(String[] args) {
+        // Creating Student object
+        Student s = new Student();
+
+        // Setting data using setter methods
+        s.setName("Apurba biswas");
+        s.setId(253013); // Integer ID matching the standard notation
+        s.setCgpa(2.63);
+
+        // Displaying data using getter methods
+        System.out.println("------ Student Information ------");
+        System.out.println("Name : " + s.getName());
+        System.out.println("ID   : E" + s.getId()); // Concatenation to match required prefix formatting
+        System.out.println("CGPA : " + s.getCgpa());
+    }
+}
