@@ -1,0 +1,51 @@
+// BankAccount class demonstrating encapsulation
+class BankAccount {
+    // Private fields
+    private String accountHolder;
+    private int accountNumber;
+    private double balance;
+
+    // Setter methods to assign values
+    void setAccountHolder(String accountHolder) {
+        this.accountHolder = accountHolder;
+    }
+
+    void setAccountNumber(int accountNumber) {
+        this.accountNumber = accountNumber;
+    }
+
+    void setBalance(double balance) {
+        this.balance = balance;
+    }
+
+    // Getter methods to return values
+    String getAccountHolder() {
+        return accountHolder;
+    }
+
+    int getAccountNumber() {
+        return accountNumber;
+    }
+
+    double getBalance() {
+        return balance;
+    }
+}
+
+// Main class
+public class lab9_2 {
+    public static void main(String[] args) {
+        // Creating BankAccount object
+        BankAccount acc = new BankAccount();
+
+        // Setting data using setter methods
+        acc.setAccountHolder("Apurba");
+        acc.setAccountNumber(1001);
+        acc.setBalance(5000.50);
+
+        // Displaying data using getter methods
+        System.out.println("Account Holder: " + acc.getAccountHolder());
+        System.out.println("Account Number: " + acc.getAccountNumber());
+        System.out.println("Balance: " + acc.getBalance());
+    }
+}
