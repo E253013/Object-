@@ -1,0 +1,34 @@
+
+// Grandfather class containing the company method
+class Grandfather {
+    void company() {
+        System.out.println("Grandfather owns a company.");
+    }
+}
+
+// Father class extending Grandfather and adding the car method
+class Father extends Grandfather {
+    void car() {
+        System.out.println("Father owns a car.");
+    }
+}
+
+// Son class extending Father and adding the bike method
+class Son extends Father {
+    void bike() {
+        System.out.println("Son owns a bike.");
+    }
+}
+
+// Main class to demonstrate Multilevel Inheritance
+public class lab6_1 {
+    public static void main(String[] args) {
+        // Creating an object of the Son class
+        Son s = new Son();
+
+        // Accessing methods from Grandfather, Father, and Son classes
+        s.company(); // Inherited from Grandfather
+        s.car();     // Inherited from Father
+        s.bike();    // Son's own method
+    }
+}
