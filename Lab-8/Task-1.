@@ -1,0 +1,37 @@
+// Parent class
+class Animal {
+    void sound() {
+        System.out.println("Animal makes Generic Sound");
+    }
+}
+
+// Subclass Dog extending Animal
+class Dog extends Animal {
+    @Override
+    void sound() {
+        System.out.println("Dog barks");
+    }
+}
+
+// Subclass Cat extending Animal
+class Cat extends Animal {
+    @Override
+    void sound() {
+        System.out.println("cat meows");
+    }
+}
+
+// Main class
+public class labrpt8 {
+    public static void main(String[] args) {
+        // Parent class references pointing to different object types
+        Animal myAnimal = new Animal();
+        Animal myDog = new Dog();
+        Animal myCat = new Cat();
+
+        // Runtime polymorphism in action
+        myAnimal.sound();
+        myDog.sound();
+        myCat.sound();
+    }
+}
