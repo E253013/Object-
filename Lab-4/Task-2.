@@ -1,0 +1,32 @@
+class IdCard {
+    String name;
+    String id;
+    String department;
+    String institution;
+
+    // Constructor
+    IdCard(String name, String id, String department, String institution) {
+        this.name = name;
+        this.id = id;
+        this.department = department;
+        this.institution = institution;
+    }
+
+    // Method to show ID details
+    void showID() {
+        System.out.println("Name: " + name);
+        System.out.println("ID: " + id);
+        System.out.println("Department: " + department);
+        System.out.println("Institution: " + institution);
+    }
+}
+
+public class lab4_2 {
+    public static void main(String[] args) {
+        // Object creation with correct constructor call
+        IdCard student1 = new IdCard("Apurba Biswas", "E253013", "CCE", "IIUC");
+
+        // Display ID card details
+        student1.showID();
+    }
+}
