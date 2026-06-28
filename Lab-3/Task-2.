@@ -1,0 +1,52 @@
+import java.util.Scanner;
+
+public class lab3_2 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter starting number: ");
+        int start = input.nextInt();
+
+        System.out.print("Enter ending number: ");
+        int end = input.nextInt();
+
+        int count = 0;
+
+        // Count prime numbers
+        for (int i = start; i <= end; i++) {
+            if (isPrime(i)) {
+                count++;
+            }
+        }
+
+        int[] primeNumbers = new int[count];
+        int index = 0;
+
+        // Store prime numbers in array
+        for (int i = start; i <= end; i++) {
+            if (isPrime(i)) {
+                primeNumbers[index] = i;
+                index++;
+            }
+        }
+
+        // Display prime numbers
+        System.out.println("Prime numbers in the range:");
+        for (int i = 0; i < primeNumbers.length; i++) {
+            System.out.print(primeNumbers[i] + " ");
+        }
+    }
+
+    // Method to check if a number is prime
+    public static boolean isPrime(int num) {
+        if (num <= 1) {
+            return false;
+        }
+        for (int i = 2; i <= num / 2; i++) {
+            if (num % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
