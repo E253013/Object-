@@ -1,0 +1,58 @@
+// Interface defining ATM operations
+interface ATMService {
+    void withdraw(double amount);
+    void deposit(double amount);
+    double checkBalance();
+}
+
+// Concrete class implementing the interface
+class DBBL implements ATMService {
+    private double balance;
+
+    public DBBL(double initialBalance) {
+        this.balance = initialBalance;
+    }
+
+    @Override
+    public void withdraw(double amount) {
+        if (amount > 0 && amount <= balance) {
+            balance -= amount; // Fixed syntax error from the document
+            System.out.println("Withdrawn: $" + amount);
+        } else {
+            System.out.println("Invalid withdrawal amount or insufficient funds.");
+        }
+    }
+
+    @Override
+    public void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+            System.out.println("Deposited: $" + amount);
+        } else {
+            System.out.println("Invalid deposit amount.");
+        }
+    }
+
+    @Override
+    public double checkBalance() {
+        return balance;
+    }
+}
+
+// Driver class (যদি আপনি একই ফোল্ডারে এটি রান করতে চান, তবে মূল ফাইলের নাম Main2 বা অন্য কিছু দিতে পারেন, কারণ উপরে ইতিমধ্যেই একটি Main ক্লাস রয়েছে)
+class MainInterface {
+    public static void main(String[] args) {
+        // Interface reference pointing to a DBBL object
+        ATMService myAccount = new DBBL(1000.0);
+
+        // Performing operations
+        System.out.println("Initial Balance: $" + myAccount.checkBalance());
+        myAccount.deposit(500.0);
+        System.out.println("Balance after deposit: $" + myAccount.checkBalance());
+        myAccount.withdraw(200.0);
+        System.out.println("Balance after withdrawal: $" + myAccount.checkBalance());
+        
+        // Triggering insufficient funds condition
+        myAccount.withdraw(2000.0);
+    }
+}
