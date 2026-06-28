@@ -1,0 +1,37 @@
+// Parent class
+class shape {
+    void draw() {
+        System.out.println("Drawing shape");
+    }
+}
+
+// Subclass circle extending shape
+class circle extends shape {
+    @Override
+    void draw() {
+        System.out.println("Drawing Circle");
+    }
+}
+
+// Subclass rectangle extending shape
+class rectangle extends shape {
+    @Override
+    void draw() {
+        System.out.println("Drawing Rectangle");
+    }
+}
+
+// Main class
+public class labrptt8 {
+    public static void main(String[] args) {
+        // Parent class references pointing to different object types
+        shape myShape = new shape();
+        shape myCircle = new circle();
+        shape myrectangle = new rectangle();
+
+        // Runtime polymorphism in action
+        myShape.draw();
+        myCircle.draw();
+        myrectangle.draw();
+    }
+}
