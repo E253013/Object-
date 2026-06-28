@@ -1,0 +1,32 @@
+class LibraryBook {
+    String title;
+    String author;
+    String bookID;
+
+    // Constructor using 'this' keyword to initialize values
+    LibraryBook(String title, String author, String bookID) {
+        this.title = title;
+        this.author = author;
+        this.bookID = bookID;
+    }
+
+    // Method to show the book details
+    void displayBookInfo() {
+        System.out.println("Title: " + this.title);
+        System.out.println("Author: " + this.author);
+        System.out.println("Book ID: " + this.bookID);
+        System.out.println();
+    }
+}
+
+public class lab5_2 {
+    public static void main(String[] args) {
+        // Creating books and passing values
+        LibraryBook book1 = new LibraryBook("Java Basics", "Faiaz", "B101");
+        LibraryBook book2 = new LibraryBook("Data Structures", "Jim", "B102");
+
+        // Displaying book information
+        book1.displayBookInfo();
+        book2.displayBookInfo();
+    }
+}
